@@ -5,6 +5,7 @@
 
 #divcentral1 {
   display: block;
+  position: relative;
 }
 
 #divcentral2 {
@@ -13,6 +14,12 @@
 
 #divcentral3 {
   display: none;
+}
+
+#timerrow {
+  position: absolute;
+  top: 0px;
+  right: 50px;
 }
 
 .tc {
@@ -64,6 +71,12 @@
   margin-bottom: 20px;
 }
 
-#winrow {
+#winrow,
+#looserow,
+#timeoutrow {
+  margin: 0 auto;
+}
+
+#divcentral3  #winrow {
   margin-top: 50px;
 }
