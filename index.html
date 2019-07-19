@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curiosities Trivia</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="assets/css/style.css"
+    />
+    <script src="assets/javascript/app.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- playind div -->
+      <div
+        id="divcentral1"
+        class="allmaindiv col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8"
+      >
+        <div id="row1" class="row">
+          <div id="colleft" class="col-xs-12 col-sm-10">
+            <!-- questions col -->
+            <h1 id="question">
+              kjashkdjhdkjlkslkfjd kdjfkhsolidhkkkkkkkkhlkjh kdsjfhjskdkfhkjd
+              sdfsdgrr erfghsrt ghyt hy thg rdt geg grewr se fwen fes
+            </h1>
+          </div>
+          <div id="colrigth" class="col-xs-12 col-sm-2">
+            <!-- timer and counters col -->
+            <div class="row">
+              <div id="timerrow" class="col-xs-3 col-sm-12 tc">
+                <h4>00:00</h4>
+              </div>
+              <div id="winrow" class="col-xs-3 col-sm-12 tc"><h4>0</h4></div>
+              <div id="looserow" class="col-xs-3 col-sm-12 tc"><h4>0</h4></div>
+              <div id="timeoutrow" class="col-xs-3 col-sm-12 tc">
+                <h4>0</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="row2" class="row">
+          <!-- answers list -->
+          <h3 id="answer1" class="q btn-info alert alert-primary" role="alert">
+            fbgkrjgn fdjngbkgvfjn kdjfnvdkljfnv kdfnvkdnfvdkjn
+          </h3>
+          <h3
+            id="answer2"
+            class="q btn-info alert alert-secondary"
+            role="alert"
+          >
+            fbgkrjgn fdjngbkgvfjn kdjfnv fdgddf dfgdsaa dkl dfg dfg dg trg ews
+            sfe jfnv kdfnvkdnfvdkjn
+          </h3>
+          <h3 id="answer3" class="q btn-info alert alert-warning" role="alert">
+            fbgkrjgn fdjngbkgvfjn kdjfn efe c erwqeq vdkljfnv kdfnvkdnfvdkjn
+          </h3>
+        </div>
+      </div>
+      <!--screem between questions-->
+      <div
+        id="divcentral2"
+        class="allmaindiv col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8"
+      >
+        <div id="row1" class="row">
+          <div id="colleft" class="col-xs-12 col-sm-10">
+            <!-- rigth answer -->
+            <h1 id="answer">
+              kjashkdjhdk jlkslkfjd kdjfkhsol idhkkkkkkkkhlkjh kdsjfhjskdkfhkjd
+              sdfsdgrr erfghsrt ghyt hy thg rdt geg grewr se fwen fes
+            </h1>
+          </div>
+          <div id="colrigth" class="col-xs-12 col-sm-2">
+            <!-- timer and counters col -->
+            <div class="row">
+              <div id="timerrow" class="col-xs-3 col-sm-12 tc">
+                <h4>00:00</h4>
+              </div>
+              <div id="winrow" class="col-xs-3 col-sm-12 tc"><h4>0</h4></div>
+              <div id="looserow" class="col-xs-3 col-sm-12 tc"><h4>0</h4></div>
+              <div id="timeoutrow" class="col-xs-3 col-sm-12 tc">
+                <h4>0</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="row2" class="row">
+          <!-- //////-->
+          <h1 id="rwt" class="q alert alert-primary" role="alert">
+            rigth wrong timeout
+          </h1>
+          <button type="button" class="next btn btn-secondary ">Next</button>
+        </div>
+      </div>
+
+      <!--end screem-->
+      <div
+        id="divcentral3"
+        class="allmaindiv col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8"
+      >
+        <div id="row1" class="row">
+          <div id="winrow" class="q alert alert-primary"><h4>0</h4></div>
+          <div id="looserow" class="q alert alert-primary"><h4>0</h4></div>
+          <div id="timeoutrow" class="q alert alert-primary">
+            <h4>0</h4>
+          </div>
+          <button type="button" class="start btn btn-secondary ">
+            Start Again
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

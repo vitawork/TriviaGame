@@ -1,0 +1,69 @@
+* {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#divcentral1 {
+  display: block;
+}
+
+#divcentral2 {
+  display: none;
+}
+
+#divcentral3 {
+  display: none;
+}
+
+.tc {
+  width: 20px;
+  text-align: left;
+  margin-left: 0;
+}
+
+.allmaindiv {
+  background: rgb(166, 223, 166);
+  margin-top: 70px;
+  margin-bottom: 50px;
+  min-height: 500px;
+}
+
+#row1 {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.q {
+  width: 85%;
+}
+
+.next {
+  width: 30%;
+  height: 50px;
+  margin-left: 35%;
+  font-size: 25px;
+}
+
+.start {
+  width: 30%;
+  height: 70px;
+  margin-left: 35%;
+  font-size: 25px;
+  margin-top: 50px;
+}
+
+#row2 {
+  padding-bottom: 20px;
+}
+
+#rwt {
+  font-size: 500%;
+}
+
+#question {
+  margin-bottom: 20px;
+}
+
+#winrow {
+  margin-top: 50px;
+}
