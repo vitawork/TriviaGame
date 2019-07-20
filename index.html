@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Curiosities Trivia</title>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,7 +18,12 @@
       media="screen"
       href="assets/css/style.css"
     />
-    <script src="assets/javascript/app.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+      integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="container-fluid">
@@ -35,13 +36,13 @@
           <h4>00:00</h4>
         </div>
         <div id="row1" class="row">
-          <div id="colleft" class="col-xs-12 col-sm-10">
+          <div id="colleft" class="col-xs-12 col-sm-offset-1 col-sm-10">
             <!-- questions col -->
             <h1 id="question">
               <!-- //////////////////question/////////////////////// -->
             </h1>
           </div>
-          <div id="colrigth" class="col-xs-12 col-sm-2">
+          <div id="colrigth" class="col-xs-12 col-sm-1">
             <!-- timer and counters col -->
             <div class="row">
               <div id="winrow" class="col-xs-4 col-sm-12 tc"><h4>0</h4></div>
@@ -53,20 +54,33 @@
           </div>
         </div>
         <div id="row2" class="row">
-          <!-- answers list -->
-          <h3 id="answer1" class="q btn-info alert alert-primary" role="alert">
-            <!-- //////////////////answer1/////////////////////// -->
-          </h3>
-          <h3
-            id="answer2"
-            class="q btn-info alert alert-secondary"
-            role="alert"
-          >
-            <!-- ///////////////////answer2////////////////////// -->
-          </h3>
-          <h3 id="answer3" class="q btn-info alert alert-warning" role="alert">
-            <!-- ////////////////////answer3///////////////////// -->
-          </h3>
+          <div id="colpicture" class="col-xs-12 col-sm-5 align-middle">
+            <img id="questionimg" alt="image" />
+          </div>
+          <div id="colanswers" class="col-xs-12 col-sm-7 align-middle">
+            <!-- answers list -->
+            <h3
+              id="answer1"
+              class="q btn-info alert alert-primary"
+              role="alert"
+            >
+              <!-- //////////////////answer1/////////////////////// -->
+            </h3>
+            <h3
+              id="answer2"
+              class="q btn-info alert alert-primary"
+              role="alert"
+            >
+              <!-- ///////////////////answer2////////////////////// -->
+            </h3>
+            <h3
+              id="answer3"
+              class="q btn-info alert alert-primary"
+              role="alert"
+            >
+              <!-- ////////////////////answer3///////////////////// -->
+            </h3>
+          </div>
         </div>
       </div>
       <!--screem between questions-->
@@ -78,7 +92,7 @@
           <h4>00:00</h4>
         </div>
         <div id="row1" class="row">
-          <div id="colleft" class="col-xs-12 col-sm-10">
+          <div id="colleft" class="col-xs-12 col-sm-offset-1 col-sm-9">
             <!-- rigth answer -->
             <h1 id="answer">
               <!-- //////////////////correct answer/////////////////////// -->
@@ -97,7 +111,7 @@
         </div>
         <div id="row2" class="row">
           <!-- //////-->
-          <h1 id="rwt" class="q alert alert-primary" role="alert">
+          <h1 id="rwt" class="q">
             <!-- ///////////rigth-wrong-timeout//////////////// -->
           </h1>
           <button type="button" class="next btn btn-secondary ">Next</button>
@@ -123,9 +137,8 @@
     </div>
 
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
     ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -137,5 +150,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>

@@ -5,25 +5,114 @@ $(document).ready(function() {
   var tout = 0;
   var actualqindex = -1;
 
+  var audiofail = new Audio("./assets/sounds/fail.mp3");
+  var audiocorrect = new Audio("./assets/sounds/correct.wav");
+
   var next_timeout;
   var question_timeout;
   var intervalId;
 
   var questions = [
     {
-      question: "1preguntasferereerv",
-      answers: ["1aaaaaaaa", "2aaaaaaaa", "3aaaaaaaaaaa"],
-      ansposition: 0
+      question: "Some months have 31 days; how many have 28?",
+      answers: ["One", "Twelve", "Four"],
+      ansposition: 0,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d1c523a.jpg"
     },
     {
-      question: "2preguntasferereerv",
-      answers: ["1bbbbbbb", "2bbbbbbb", "3bbbbbbb"],
-      ansposition: 1
+      question: "Do they have a 4th of July in England?",
+      answers: ["Yes", "No", "Sometimes"],
+      ansposition: 1,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d1ca2ea.jpg"
     },
     {
-      question: "3preguntasferereerv",
-      answers: ["1ccccccccc", "2ccccccccc", "3ccccccccc"],
-      ansposition: 2
+      question: "Why can’t a man living in the U.S. be buried in Canada?",
+      answers: [
+        "You can't be buried outside of your own country",
+        "He's not a Canadian citizen",
+        "He can't be buried if he's not dead"
+      ],
+      ansposition: 2,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d1cfaa7.jpg"
+    },
+    {
+      question: "How many outs are there in an inning?",
+      answers: ["3", "2", "6"],
+      ansposition: 2,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d1d5407.jpg"
+    },
+    {
+      question:
+        "A doctor gives you three pills telling you to take one every half hour. How long would the pills last?",
+      answers: ["3 hours", "2 hours", "1 hour"],
+      ansposition: 2,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d1daaef.jpg"
+    },
+    {
+      question: "How many two cent stamps are there in a dozen?",
+      answers: ["None", "6", "12"],
+      ansposition: 2,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d1e06d6.jpg"
+    },
+    {
+      question: "How many animals of each sex did Moses take on the ark?",
+      answers: [
+        "Two of each",
+        "None, Moses didn't board the ark",
+        "Three of each"
+      ],
+      ansposition: 1,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d1e67dd.jpg"
+    },
+    {
+      question:
+        "A clerk in the butcher shop is 5’10” tall. What does he weigh?",
+      answers: ["There's no way of knowing", "200", "Meat"],
+      ansposition: 2,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d1ec231.jpg"
+    },
+    {
+      question:
+        "Before the Mount Everest was discovered, what was the highest mountain in the world?",
+      answers: ["The swiss Alps", "Mount Everest", "Mount Kilamanjaro"],
+      ansposition: 0,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d1f1023.jpg"
+    },
+    {
+      question:
+        "If there are fifteen crows on the fence and the farmer shoots a third of them, how many are left?",
+      answers: ["None", "Four", "Three"],
+      ansposition: 0,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d20254f.jpg"
+    },
+    {
+      question: "How many times you can subtract the number 5 from 25?",
+      answers: ["Twice", "Once", "Three times"],
+      ansposition: 1,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d207d41.jpg"
+    },
+    {
+      question:
+        "Is it legal for a man in California to marry his widow’s sister?",
+      answers: [
+        "Of course he can",
+        "2No he's dead",
+        "It depends on the circumstances of his death"
+      ],
+      ansposition: 1,
+      imageUrl:
+        "http://quizpug.com/wp-content/uploads/qc-images/588243d20c640.jpg"
     }
   ];
 
@@ -40,6 +129,7 @@ $(document).ready(function() {
     $("#answer1").html(questions[index].answers[0]);
     $("#answer2").html(questions[index].answers[1]);
     $("#answer3").html(questions[index].answers[2]);
+    $("#questionimg").attr("src", questions[index].imageUrl);
   }
 
   reset(); ///////reseating to start
@@ -65,6 +155,11 @@ $(document).ready(function() {
     $("#divcentral2").css("display", "block");
     $("#divcentral3").css("display", "none");
     $("#rwt").text(rwt);
+    $("#rwt")
+      .fadeOut()
+      .fadeIn()
+      .fadeOut()
+      .fadeIn();
     $("#answer").text(
       questions[actualqindex].answers[questions[actualqindex].ansposition]
     );
@@ -79,7 +174,7 @@ $(document).ready(function() {
       } else {
         next();
       }
-    }, 7000);
+    }, 6000);
   }
 
   function next() {
@@ -106,6 +201,7 @@ $(document).ready(function() {
 
       question_timeout = setTimeout(function() {
         clearInterval(intervalId);
+        audiofail.play();
         right_wrong_timeout_answer("Time Out");
       }, 1000 * timer);
     }
@@ -138,23 +234,29 @@ $(document).ready(function() {
   $("#answer1").click(function() {
     if (questions[actualqindex].ansposition === 0) {
       right_wrong_timeout_answer("Right Answer");
+      audiocorrect.play();
     } else {
       right_wrong_timeout_answer("Wrong Answer");
+      audiofail.play();
     }
   });
 
   $("#answer2").click(function() {
     if (questions[actualqindex].ansposition === 1) {
       right_wrong_timeout_answer("Right Answer");
+      audiocorrect.play();
     } else {
       right_wrong_timeout_answer("Wrong Answer");
+      audiofail.play();
     }
   });
   $("#answer3").click(function() {
     if (questions[actualqindex].ansposition === 2) {
       right_wrong_timeout_answer("Right Answer");
+      audiocorrect.play();
     } else {
       right_wrong_timeout_answer("Wrong Answer");
+      audiofail.play();
     }
   });
 
