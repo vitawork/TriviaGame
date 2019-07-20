@@ -1,11 +1,11 @@
 * {
   text-align: center;
   margin: 0 auto;
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
 }
 
 #divcentral1 {
-  display: block;
+  display: none;
   position: relative;
 }
 
@@ -37,13 +37,8 @@
   border-left-style: solid;
   border-right-style: solid;
   border-width: 2px;
-  border-image: 
-    linear-gradient(
-      to top, 
-      rgb(14, 13, 13), 
-      rgba(8, 8, 8, 0)
-    ) 1 1%;
-    border-bottom: solid 2px rgb(14, 13, 13);
+  border-image: linear-gradient(to top, rgb(14, 13, 13), rgba(8, 8, 8, 0)) 1 1%;
+  border-bottom: solid 2px rgb(14, 13, 13);
 }
 
 #row1 {
@@ -52,16 +47,16 @@
 }
 
 .q {
-   color: rgba(70, 70, 70, 0.884);
+  color: rgba(70, 70, 70, 0.884);
   width: 85%;
   padding: 15px;
   margin: 10px;
   border-radius: 7px;
 }
 
-.q:hover{
-   background: rgb(15, 111, 126);
-   color: azure;
+.q:hover {
+  background: rgb(15, 111, 126);
+  color: azure;
 }
 
 .next {
@@ -72,8 +67,8 @@
 }
 
 .start {
-  width: 30%;
-  height: 70px;
+  min-width: 30%;
+  height: 150%;
   margin-left: 35%;
   font-size: 25px;
   margin-top: 50px;
@@ -84,9 +79,8 @@
 }
 
 #rwt {
-   width: 85%;
+  width: 85%;
   font-size: 500%;
-  /* margin-top: 20px; */
   margin-bottom: 40px;
 }
 
@@ -107,7 +101,7 @@
 
 #questionimg {
   width: 100%;
-  border-radius: 50%;
+  border-radius: 4%;
   border: solid 2px rgb(22, 22, 22);
   height: 100%;
 }
@@ -116,15 +110,11 @@
   margin-top: 20px;
 }
 
-#row1{
-   padding-top: 40px;
+#row1 {
+  padding-top: 40px;
 }
 
-#colrigth{
-   padding: 0;
-   margin: 0;
+#colrigth {
+  padding: 0;
+  margin: 0;
 }
-
-/* #colleft{
-   margin-right: 0;
-} */

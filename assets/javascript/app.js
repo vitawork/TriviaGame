@@ -107,7 +107,7 @@ $(document).ready(function() {
         "Is it legal for a man in California to marry his widow’s sister?",
       answers: [
         "Of course he can",
-        "2No he's dead",
+        "No he's dead",
         "It depends on the circumstances of his death"
       ],
       ansposition: 1,
@@ -151,44 +151,58 @@ $(document).ready(function() {
       }
     }
 
-    $("#divcentral1").css("display", "none");
-    $("#divcentral2").css("display", "block");
     $("#divcentral3").css("display", "none");
+    $("#divcentral1").fadeOut(500, function() {
+      $("#divcentral2").fadeIn(500, function() {
+        $("#rwt")
+          .fadeOut()
+          .fadeIn()
+          .fadeOut()
+          .fadeIn();
+      });
+    });
     $("#rwt").text(rwt);
-    $("#rwt")
-      .fadeOut()
-      .fadeIn()
-      .fadeOut()
-      .fadeIn();
-    $("#answer").text("Answer: "+
-      questions[actualqindex].answers[questions[actualqindex].ansposition]
+
+    $("#answer").text(
+      "Answer: " +
+        questions[actualqindex].answers[questions[actualqindex].ansposition]
     );
     if (actualqindex === questions.length - 1) {
       $(".next").text("Finish");
     }
     next_timeout = setTimeout(function() {
-      if (actualqindex === questions.length - 1) {
-        $("#divcentral1").css("display", "none");
-        $("#divcentral2").css("display", "none");
-        $("#divcentral3").css("display", "block");
-      } else {
-        next();
-      }
+      next();
     }, 6000);
   }
 
   function next() {
     if (actualqindex === questions.length - 1) {
       $("#divcentral1").css("display", "none");
-      $("#divcentral2").css("display", "none");
-      $("#divcentral3").css("display", "block");
+      $("#divcentral2").fadeOut(500, function() {
+        $("#divcentral3").fadeIn(500);
+      });
+      $("#winrow h1").text("Correct: " + right);
+      $("#looserow h1").text("Wrong: " + wrong);
+      $("#timeoutrow h1").text("Time Out: " + tout);
     } else {
       $(".next").text("Next");
       actualqindex++;
       timer = 60;
-      $("#divcentral1").css("display", "block");
-      $("#divcentral2").css("display", "none");
+
       $("#divcentral3").css("display", "none");
+      $("#divcentral2").fadeOut(500, function() {
+        $("#divcentral1").fadeIn(500);
+
+        $("#answer3").hide();
+        $("#answer2").hide();
+        $("#answer1")
+          .hide()
+          .show(300, function() {
+            $("#answer2").show(300, function() {
+              $("#answer3").show(300);
+            });
+          });
+      });
 
       $("#timerrow h4").text("00:00");
       $("#winrow h4").text(right);
