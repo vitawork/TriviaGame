@@ -160,7 +160,7 @@ $(document).ready(function() {
       .fadeIn()
       .fadeOut()
       .fadeIn();
-    $("#answer").text(
+    $("#answer").text("Answer: "+
       questions[actualqindex].answers[questions[actualqindex].ansposition]
     );
     if (actualqindex === questions.length - 1) {

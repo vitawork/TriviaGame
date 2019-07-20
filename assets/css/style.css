@@ -1,6 +1,7 @@
 * {
   text-align: center;
   margin: 0 auto;
+  font-family: 'Lobster', cursive;
 }
 
 #divcentral1 {
@@ -18,8 +19,8 @@
 
 #timerrow {
   position: absolute;
-  bottom: -9px;
-  right: 0%;
+  bottom: 0px;
+  right: 2%;
 }
 
 .tc {
@@ -51,7 +52,16 @@
 }
 
 .q {
+   color: rgba(70, 70, 70, 0.884);
   width: 85%;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 7px;
+}
+
+.q:hover{
+   background: rgb(15, 111, 126);
+   color: azure;
 }
 
 .next {
@@ -74,6 +84,7 @@
 }
 
 #rwt {
+   width: 85%;
   font-size: 500%;
   /* margin-top: 20px; */
   margin-bottom: 40px;
@@ -87,6 +98,7 @@
 #looserow,
 #timeoutrow {
   margin: 0 auto;
+  padding: 0;
 }
 
 #divcentral3 #winrow {
@@ -107,3 +119,12 @@
 #row1{
    padding-top: 40px;
 }
+
+#colrigth{
+   padding: 0;
+   margin: 0;
+}
+
+/* #colleft{
+   margin-right: 0;
+} */

@@ -24,6 +24,8 @@
       integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="./assets/images/iconfinder_Help_1493288.png" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container-fluid">
@@ -45,10 +47,15 @@
           <div id="colrigth" class="col-xs-12 col-sm-1">
             <!-- timer and counters col -->
             <div class="row">
-              <div id="winrow" class="col-xs-4 col-sm-12 tc"><h4>0</h4></div>
-              <div id="looserow" class="col-xs-4 col-sm-12 tc"><h4>0</h4></div>
+              <div id="winrow" class="col-xs-4 col-sm-12 tc">
+                <h3></h3>
+                <h4 class="fas fa-check">0</h4>
+              </div>
+              <div id="looserow" class="col-xs-4 col-sm-12 tc">
+                <h4 class="fas fa-times">0</h4>
+              </div>
               <div id="timeoutrow" class="col-xs-4 col-sm-12 tc">
-                <h4>0</h4>
+                <h4 class="fas fa-stopwatch">0</h4>
               </div>
             </div>
           </div>
@@ -61,22 +68,19 @@
             <!-- answers list -->
             <h3
               id="answer1"
-              class="q btn-info alert alert-primary"
-              role="alert"
+              class="q"
             >
               <!-- //////////////////answer1/////////////////////// -->
             </h3>
             <h3
               id="answer2"
-              class="q btn-info alert alert-primary"
-              role="alert"
+              class="q"
             >
               <!-- ///////////////////answer2////////////////////// -->
             </h3>
             <h3
               id="answer3"
-              class="q btn-info alert alert-primary"
-              role="alert"
+              class="q"
             >
               <!-- ////////////////////answer3///////////////////// -->
             </h3>
@@ -92,26 +96,30 @@
           <h4>00:00</h4>
         </div>
         <div id="row1" class="row">
-          <div id="colleft" class="col-xs-12 col-sm-offset-1 col-sm-9">
+          <div id="colleft" class="col-xs-12 col-sm-offset-1 col-sm-10">
             <!-- rigth answer -->
             <h1 id="answer">
               <!-- //////////////////correct answer/////////////////////// -->
             </h1>
           </div>
-          <div id="colrigth" class="col-xs-12 col-sm-2">
+          <div id="colrigth" class="col-xs-12 col-sm-1">
             <!-- timer and counters col -->
             <div class="row">
-              <div id="winrow" class="col-xs-4 col-sm-12 tc"><h4>0</h4></div>
-              <div id="looserow" class="col-xs-4 col-sm-12 tc"><h4>0</h4></div>
+              <div id="winrow" class="col-xs-4 col-sm-12 tc">
+                <h4 class="fas fa-check">0</h4>
+              </div>
+              <div id="looserow" class="col-xs-4 col-sm-12 tc">
+                <h4 class="fas fa-times">0</h4>
+              </div>
               <div id="timeoutrow" class="col-xs-4 col-sm-12 tc">
-                <h4>0</h4>
+                <h4 class="fas fa-stopwatch">0</h4>
               </div>
             </div>
           </div>
         </div>
         <div id="row2" class="row">
           <!-- //////-->
-          <h1 id="rwt" class="q">
+          <h1 id="rwt">
             <!-- ///////////rigth-wrong-timeout//////////////// -->
           </h1>
           <button type="button" class="next btn btn-secondary ">Next</button>
