@@ -140,14 +140,14 @@ $(document).ready(function() {
 
     if (rwt === "Right Answer") {
       right++;
-      $("#winrow h4").text(right);
+      $("#winrow h4").text("  " + right);
     } else {
       if (rwt === "Wrong Answer") {
         wrong++;
-        $("#looserow h4").text(wrong);
+        $("#looserow h4").text("  " + wrong);
       } else {
         tout++;
-        $("#timeoutrow h4").text(tout);
+        $("#timeoutrow h4").text("  " + tout);
       }
     }
 
@@ -205,9 +205,9 @@ $(document).ready(function() {
       });
 
       $("#timerrow h4").text("00:00");
-      $("#winrow h4").text(right);
-      $("#looserow h4").text(wrong);
-      $("#timeoutrow h4").text(tout);
+      $("#winrow h4").text("  " + right);
+      $("#looserow h4").text("  " + wrong);
+      $("#timeoutrow h4").text("  " + tout);
 
       show_question_answers(actualqindex);
 
